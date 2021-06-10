@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/index2.css" />
+    <title>Copy</title>
+  </head>
+
+  <body>
+    <!-- Start Nav section -->
+    <nav class="addCardSection">
+      <div class="title">
+        <i class="fas fa-hand-spock"></i>
+        <span>You here. <u>Here is your to-do list:</u></span>
+      </div>
+      <div class="addBtn">
+        <button
+          type="button"
+          class="btn btn-primary addCard"
+          data-bs-toggle="modal"
+          data-bs-target="#modal"
+          id="addCardForm"
+        >
+          Add a Task
+        </button>
+      </div>
+    </nav>
+    <!-- End nav section here -->
+
+    <!-- Start the add-card form -->
+    <div
+      class="modal fade"
+      id="modal"
+      tabindex="-1"
+      aria-labelledby="addCardForm"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2>Add a Task</h2>
+            <button
+              type="button"
+              id="closeBtn"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <!-- main content of the form -->
+
+          <div class="container">
+            <!-- Task -->
+            <form>
+              <!-- Task -->
+              <div class="mb-2">
+                <label for="taskName" class="form-label">Task</label>
+                <input
+                  type="form-control"
+                  class="form-control"
+                  id="taskName"
+                  required
+                />
+              </div>
+
+              <!-- Task Description -->
+              <div class="mb-2">
+                <label for="description" class="form-label"
+                  >Task Description</label
+                >
+                <textarea
+                  maxlength="280"
+                  class="form-control"
+                  id="description"
+                  rows="3"
+                  placeholder="Write a short and sweet description for the task."
+                ></textarea>
+              </div>
+
+              <!-- Calendar -->
+              <div class="mb-2 dateDiv">
+                <label for="dueDate" class="form-label">Due Date</label>
+                <input type="date" class="form-control" id="dueDate" required />
+              </div>
+
+              <!-- Person Assigned -->
+              <div class="mb-2">
+                <label for="assignedPPL" class="form-label">Name</label>
+                <input
+                  type="form-control"
+                  class="form-control"
+                  id="assignedPPL"
+                  placeholder="Task to be assigned to..."
+                  required
+                />
+              </div>
+
+              <!-- Status Field -->
+              <div class="mb-4">
+                <label for="status" class="form-label" id="statusLabel"
+                  >Status</label
+                >
+                <select
+                  class="form-select"
+                  id="status"
+                  aria-label="Default select example"
+                >
+                  <option value="to-start" selected>To Start</option>
+                  <option value="in-progress">In Progress</option>
+                  <option value="in-review">In Review</option>
+                  <option value="complete">Completed</option>
+                </select>
+              </div>
+
+              <!-- Button -->
+              <button id="saveBtn" class="btn" type="button">CREATE</button>
+              <div class="additionalBtns">
+                <button class="resetBtn" id="resetBtn">reset</button>
+                <button class="deleteBtn" id="deleteBtn">delete</button>
+              </div>
+              <button id="doneBtn" class="doneBtn">DONE</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End show add-card form -->
+
+    <!-- Start main section -->
+    <session class="main">
+      <!-- Start to-start section -->
+      <div class="main-column">
+        <h2>To Start</h2>
+        <div class="card-display" id="startCol"></div>
+      </div>
+      <!-- End to-start section -->
+
+      <!-- Start in-progress section -->
+      <div class="main-column">
+        <h2>In Progress</h2>
+        <div class="card-display" id="inProgressCol"></div>
+      </div>
+      <!-- End in-progress section -->
+
+      <!-- Start in-review section -->
+      <div class="main-column">
+        <h2>In Review</h2>
+        <div class="card-display" id="inReviewCol"></div>
+      </div>
+      <!-- End in-review section -->
+    </session>
+    <!-- End main section -->
+
+    <!-- Start completed section -->
+    <div class="complete">
+      <h2 id="completeBtn">
+        Completed<i class="fas fa-angle-double-down" id="angle"></i>
+      </h2>
+      <div class="complete-column" id="completeCol"></div>
+      <footer>Copyright 2021. All Rights Reversed by SydMel.</footer>
+    </div>
+    <!-- End completed section -->
+
+    <!-- Optional JavaScript -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+      integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/b0d8c3aa4a.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Vanilla JS -->
+    <!-- <script src="../js/index.js" defer></script> -->
+    <script src="../js/index2.js"></script>
+  </body>
+</html>

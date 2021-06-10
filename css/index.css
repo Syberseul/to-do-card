@@ -1,0 +1,272 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #d7f1f4;
+  font-size: 18px;
+}
+
+.addCardSection {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.playwith {
+  margin: 3rem 10rem;
+  background-image: linear-gradient(
+    to bottom,
+    #10ed36,
+    #00f188,
+    #00f2c2,
+    #00efeb,
+    #00e9ff
+  );
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: left;
+  align-items: center;
+  flex-basis: 33%;
+}
+
+/* Single card css */
+.cards {
+  max-width: 350px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10%;
+  margin: 2rem 3rem;
+  box-shadow: 10px 10px 8px #bebebe;
+}
+
+.cards:nth-child(odd) {
+  background-color: #f6f2f6;
+}
+
+.cards:nth-child(even) {
+  background-color: #f5f8ef;
+}
+
+.firstRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.firstRow > span {
+  margin: 1rem 1.5rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.firstRow > button {
+  /* background-color: rgb(255, 108, 108); */
+  background-color: transparent;
+  height: 2rem;
+  width: 2rem;
+  margin: 1rem 1.7rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+}
+
+.firstRow > button:hover {
+  background-color: rgb(255, 52, 52);
+}
+
+.date,
+.title {
+  font-size: 1rem;
+  margin-left: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.title {
+  font-weight: bold;
+}
+
+.description {
+  max-width: 90%;
+  max-height: 8rem;
+  height: 8rem;
+  margin: 1.5rem 5%;
+  font-size: 0.85rem;
+  font-style: italic;
+  overflow: hidden auto;
+  overflow-wrap: normal;
+}
+
+.status {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0.25rem 1.5rem;
+  background-color: transparent;
+  height: 1.5rem;
+  cursor: pointer;
+}
+
+.assigned {
+  margin: 0.5rem 1.5rem;
+  font-weight: bold;
+}
+
+/* Five colors for five status */
+.progress {
+  color: #2bff09;
+}
+.progress:hover {
+  color: #94fc84;
+}
+
+.done {
+  color: #000000;
+}
+.done:hover {
+  color: #363636;
+}
+
+.todo {
+  color: #09f0ff;
+}
+.todo:hover {
+  color: #78f4fd;
+}
+
+.roadblock {
+  color: #ff4b4b;
+}
+.roadblock:hover {
+  color: #ff8080;
+}
+
+.review {
+  color: #0922ff;
+}
+.review:hover {
+  color: #4658ff;
+}
+
+/* Form CSS */
+
+.modal-header {
+  background-color: rgb(77, 20, 74);
+}
+
+.modal-header .btn-close {
+  background-color: white;
+  margin-right: 10px ;
+}
+
+.modal-header h2 {
+  color: white;
+  font-weight: bold;
+  font-size: 1.8em;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+}
+
+.modal-header .btn-close {
+  font-size: small;
+}
+
+
+/* 
+. addCardSection {
+  width: 600px;
+  background-color: #f5f8ef;
+} */
+
+.container {
+  padding: 0;
+}
+
+.container form {
+  width: 100%;
+  height: 100%;
+  padding: 5% 10%;
+  /* background-color: rgb(228, 255, 248); */
+  /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); */
+  background-color: #f5f8ef;
+}
+
+/* .container form h2 {
+  color: black;
+  font-weight: bold;
+  font-size: 1.8em;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+  padding-top: 15px;
+} */
+
+.container form .form-control {
+  width: 100%;
+  height: 50px;
+  background-color: white;
+  /* border-radius: 8px; */
+  border: 1px solid rgb(163, 163, 163);
+  font-size: 0.8em;
+}
+
+.container form .btn {
+  margin-left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 60px;
+  cursor: pointer;
+  font-size: 1.5em;
+  border-radius: 15px;
+  transition: 0.3s;
+  padding-bottom: 30px;
+  background-color: rgb(77, 20, 74);
+  color: white;
+  font-weight: bold;
+  letter-spacing: 0.5em;
+}
+
+.container form .btn:hover {
+  background-color: black;
+}
+
+.container form .form-label {
+  font-size: 1em;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  color: rgb(71, 71, 71);
+}
+
+.container form #exampleFormControlTextarea1 {
+  max-height: 100px;
+  height: 100%;
+}
+
+.container form .form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-header .fas {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form-header .fas:hover {
+  color: rgb(77, 20, 74);
+}
+
+.btn-close {
+  font-size: 2rem;
+  background-color: red;
+}
+
+
